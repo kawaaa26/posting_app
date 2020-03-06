@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
   def line_notification(post)
     @line_notify = LineNotify.new(ENV['LINE_TOKEN'])
-    @line_options = { message: "\n\nTITLE:\n#{post.title}\n\nCONTENT:\n#{post.content}\n" }
+    @line_options = { message: "\n\nTITLE:\n#{post.title}\n\nCONTENT:\n#{post.content}\n\nURL\n#{post.url}" }
     @line_notify.ping(@line_options)
   end
 

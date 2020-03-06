@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 2020_03_05_081727) do
+ActiveRecord::Schema.define(version: 2020_03_06_071007) do
 
   enable_extension "plpgsql"
 
@@ -7,6 +7,7 @@ ActiveRecord::Schema.define(version: 2020_03_05_081727) do
     t.text "content", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "url", default: ""
   end
 
 end
